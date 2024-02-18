@@ -6,11 +6,11 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.platforms }}
+    runs-on: ${{ matrix.platform }}
     strategy:
       fail-fast: false
       matrix:
-	platforms: [ubuntu-latest, blacksmith-staging, blacksmith-staging-2vcpu-ubuntu-2204]
+	platform: [ubuntu-latest, blacksmith-staging, blacksmith-staging-2vcpu-ubuntu-2204]
         ocaml-compiler:
           - ocaml-base-compiler.4.14.1
           - ocaml-base-compiler.5.0.0
